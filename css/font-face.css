@@ -1,0 +1,12 @@
+/* StdEngschrift */
+
+@font-face {
+  font-family: 'StdEngschrift';
+  src: url('../fonts/StdEngschrift/StdEngschrift.eot');
+  src: url('../fonts/StdEngschrift/StdEngschrift.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/StdEngschrift/StdEngschrift.woff') format('woff'),
+       url('../fonts/StdEngschrift/StdEngschrift.ttf') format('truetype'),
+       url('../fonts/StdEngschrift/StdEngschrift.svg#StdEngschrift') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
