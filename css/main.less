@@ -1,0 +1,95 @@
+// imports
+
+@import 'twitter/bootstrap/variables';
+@import 'variables';
+@import 'twitter/bootstrap/mixins';
+
+// simple reset
+
+body, html {
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+// typography
+
+body {
+  font-family: 'StdEngschrift', sans-serif;
+}
+
+// bgs 
+
+html {
+  background-image: url(../img/bg-bottom.jpg);
+  background-position: center bottom;
+}
+
+body {
+  background-image: url(../img/bg-top.jpg);
+  background-position: center top;
+}
+
+// header
+
+#app-header {
+  @height: 130px;
+  @paddingX: 25px;
+  @paddingY: 15px;
+
+  background: #fff;
+  width: @app-width - (@paddingX * 2);
+  height: @height - (@paddingY * 2);
+  padding: @paddingY @paddingX;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  top: 45px;
+
+  // logo
+
+  .logo {
+    margin: 0;
+    float: left;
+
+    a, img { display: block; }
+  }
+}
+
+// navigation
+
+#app-navigation {
+  position: absolute;
+  right: 25px;
+  bottom: 15px;
+
+  .navigation-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  li {
+    display: inline;
+    margin: 0 0 0 50px;
+  }
+
+  a {
+    text-decoration: none;
+    color: #585858;
+    font-size: 36px;
+
+    &:hover {
+      border-bottom: 5px solid;
+    }
+  }
+}
+
+// banner
+
+#banner-sup {
+  width: @app-width;
+  margin: 295px auto 0 auto;
+
+  @import 'banners/greetings';
+}
