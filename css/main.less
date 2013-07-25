@@ -205,6 +205,21 @@ body {
         .transition(all @animation-time ease-in-out);
       }
 
+      &.open {
+        width: 100%;
+        border-top: 6px solid #910586;
+        border-bottom: 6px solid #910586;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 2;
+
+        .cover {
+          top: 0;
+          .transition(all @animation-time ease-in-out);
+        }
+      }
+
       a {
         height: 210px;
         display: block;
