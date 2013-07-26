@@ -36,6 +36,16 @@
         }, animationTime);
       }, 300);
 
+      var closeItem = function(e) {
+        e.preventDefault();
+
+        $t.animate({
+          height: oldHeight
+        }, animationTime, function() {
+          $item.removeClass('open');
+        });
+      }
+
       updateHeight();
       $window.on('resize', updateHeight);
     });
