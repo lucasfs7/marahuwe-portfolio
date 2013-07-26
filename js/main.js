@@ -22,7 +22,7 @@
       offset: -100
     });
 
-    $work.find('.work-list .item a').on('click', function(e) {
+    $work.find('.work-list .work-item .open-work').on('click', function(e) {
       e.preventDefault();
       var t = e.target;
 
@@ -31,29 +31,31 @@
       }
 
       var $t = $(t);
-      var $item = $t.parents('.item');
-      var oldHeight = $t.height();
+      var $item = $t.parents('.work-item');
+      var oldHeight = $item.height();
 
       $item.addClass('open');
 
-      var updateHeight = _.debounce(function() {
-        $t.animate({
+      var updateHeight = function() {
+        $item.animate({
           height: $window.innerHeight() - 12
         }, animationTime);
-      }, 300);
+      };
+      
+      var updateHeightOnResize = _.debounce(updateHeight, 300);
 
       var closeItem = function(e) {
         e.preventDefault();
-
-        $t.animate({
+        $item.animate({
           height: oldHeight
         }, animationTime, function() {
           $item.removeClass('open');
         });
       }
 
+      $item.find('.content .options .close a').on('click', closeItem);
       updateHeight();
-      $window.on('resize', updateHeight);
+      $window.on('resize', updateHeightOnResize);
     });
 
     $window.on('scroll', updateHeader);
