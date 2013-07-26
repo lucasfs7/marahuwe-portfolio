@@ -2,6 +2,7 @@
   $(document).ready(function() {
     var $window = $(window);
     var $appHeader = $('#app-header');
+    var $appNav = $('#app-navigation');
     var $work = $('#work');
 
     var animationTime = 500;
@@ -15,6 +16,11 @@
         $appHeader.removeClass('fixed');
       }
     }, 300);
+
+    $appNav.find('a').smoothScroll({
+      preventDefault: false,
+      offset: -100
+    });
 
     $work.find('.work-list .item a').on('click', function(e) {
       e.preventDefault();
