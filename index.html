@@ -16,27 +16,36 @@
   <!-- header -->
   <header id="app-header">
 
-    <!-- logo -->
-    <h1 class="logo">
-      <a href="/">
-        <img src="img/logo.jpg" alt="Mara Huwe">
-      </a>
-    </h1>
+    <!-- side-a -->
+    <div class="side-a">
 
-    <!-- navigation -->
-    <nav id="app-navigation">
-      <ul class="navigation-list">
-        <li class="item">
-          <a href="#about">sobre</a>
-        </li>
-        <li class="item">
-          <a href="#work">trabalhos</a>
-        </li>
-        <li class="item">
-          <a href="#contact">contato</a>
-        </li>
-      </ul>
-    </nav>
+      <!-- logo -->
+      <h1 class="logo">
+        <a href="/">
+          <img src="img/logo.jpg" alt="Mara Huwe">
+        </a>
+      </h1>
+
+      <!-- navigation -->
+      <nav id="app-navigation">
+        <ul class="navigation-list">
+          <li class="item">
+            <a class="scroll" href="#about">sobre</a>
+          </li>
+          <li class="item">
+            <a class="scroll" href="#work">trabalhos</a>
+          </li>
+          <li class="item">
+            <a class="flip" href="#contact">contato</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    
+    <!-- side-b -->
+    <div class="side-b">
+      <a href="#" class="revert-flip">Voltar</a>
+    </div>
   </header>
   
   <!-- banner -->
@@ -370,7 +379,9 @@
   <!-- scripts -->
   <script src="http://underscorejs.org/underscore-min.js"></script>
   <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="js/jquery-ui-1.10.3.custom.min.js"></script>
   <script src="js/jquery.smooth-scroll.min.js"></script>
+  <script src="js/jquery.flip.min.js"></script>
   <script src="js/twitter/bootstrap/bootstrap-transition.js"></script>
   <script src="js/twitter/bootstrap/bootstrap-carousel.js"></script>
   <script src="js/main.js"></script>

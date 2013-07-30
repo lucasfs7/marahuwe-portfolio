@@ -2,6 +2,8 @@
   $(document).ready(function() {
     var $window = $(window);
     var $appHeader = $('#app-header');
+    var $appHeaderSideA = $appHeader.find('.side-a');
+    var $appHeaderSideB = $appHeader.find('.side-b');
     var $appNav = $('#app-navigation');
     var $work = $('#work');
 
@@ -17,9 +19,31 @@
       }
     }, 300);
 
-    $appNav.find('a').smoothScroll({
+    $appNav.find('a.scroll').smoothScroll({
       preventDefault: false,
       offset: -100
+    });
+
+    $appNav.find('a.flip').on('click', function(e) {
+      e.preventDefault();
+      $appHeaderSideB.flip({
+        direction:'bt',
+        color: '#fff',
+        onBefore: function() {
+          $appHeaderSideA.hide();
+        }
+      });
+    });
+
+    $appHeaderSideB.find('a.revert-flip').on('click', function(e) {
+      e.preventDefault();
+      $appHeaderSideB.flip({
+        direction:'tb',
+        color: '#fff',
+        onEnd: function() {
+          $appHeaderSideA.show();
+        }
+      });
     });
 
     $work.find('.work-list .work-item .open-work').on('click', function(e) {

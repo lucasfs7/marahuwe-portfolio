@@ -59,7 +59,7 @@ body {
 #app-header {
   @height: 130px;
 
-  background: #fff;
+  
   width: @app-width;
   height: @height;
   margin: 0 0 0 -(@app-width/2);
@@ -69,6 +69,20 @@ body {
   left: 50%;
   z-index: 1;
   .transition(all @animation-time ease-in-out);
+
+  .side-a,
+  .side-b {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .side-a { z-index: 1; }
+
+  .side-b { z-index: 0; }
 
   &.fixed {
     width: 100%;
