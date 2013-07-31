@@ -61,9 +61,11 @@
       $item.addClass('open');
 
       var updateHeight = function() {
-        $item.animate({
-          height: $window.innerHeight() - 12
-        }, animationTime);
+        if ($item.hasClass('open')) {
+          $item.animate({
+            height: $window.innerHeight() - 12
+          }, animationTime);
+        }
       };
       
       var updateHeightOnResize = _.debounce(updateHeight, 300);
