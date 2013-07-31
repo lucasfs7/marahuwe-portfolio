@@ -10,8 +10,7 @@
   border-top: 2px solid #fff;
   position: relative;
   .transition(width @animation-time ease-in-out);
-  overflow-x: hidden;
-  overflow-y: auto;
+  overflow: hidden;
 
   &:hover {
     width: 100%;
@@ -30,6 +29,8 @@
     top: 0;
     left: 0;
     z-index: 2;
+    overflow-x: hidden;
+    overflow-y: auto;
 
     .open-work { display: none; }
 
