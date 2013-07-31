@@ -107,12 +107,24 @@
         }
       }
 
-      .carousel-control {
-        text-decoration: none;
-        font-family: Arial;
+      .carousel-options {
+        position: absolute;
+        top: 60px;
+        right: 50px;
+        z-index: 2;
 
-        &.left {
-          left: 350px;
+        .carousel-indicators {
+          margin: 0 65px 0 20px;
+          position: static;
+        }
+
+        .carousel-control {
+          text-decoration: none;
+          font-family: Arial;
+          position: static;
+          
+          &.left { float: left; }
+          &.right { float: right; }
         }
       }
     }
