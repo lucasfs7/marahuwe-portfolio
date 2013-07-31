@@ -10,6 +10,8 @@
   border-top: 2px solid #fff;
   position: relative;
   .transition(width @animation-time ease-in-out);
+  overflow-x: hidden;
+  overflow-y: auto;
 
   &:hover {
     width: 100%;
@@ -20,7 +22,7 @@
   }
 
   &.open {
-    background-position: 0 0;
+    background-image: none !important;
     width: 100%;
     border-top: 6px solid #910586;
     border-bottom: 6px solid #910586;
